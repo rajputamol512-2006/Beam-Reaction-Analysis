@@ -430,14 +430,14 @@
                 <h2>Theory</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
                     <div>
-                        <h4>SF_y = 0 & SM = 0</h4>
+                        <h4>ΣF_y = 0 & ΣM = 0</h4>
                         <p>Vertical force equilibrium and moment equilibrium about supports determine reaction forces.</p>
-                        <p><strong>R_A + R_B = F × sin(?)</strong></p>
+                        <p><strong>R_A + R_B = F × sin(θ)</strong></p>
                     </div>
                     <div>
                         <h4>Formulas</h4>
-                        <p><code>R_A = (F × sin(?) × b) / L</code></p>
-                        <p><code>R_B = (F × sin(?) × a) / L</code></p>
+                        <p><code>R_A = (F × sin(θ) × b) / L</code></p>
+                        <p><code>R_B = (F × sin(θ) × a) / L</code></p>
                         <p>Where L = a + b (total span)</p>
                     </div>
                 </div>
@@ -449,7 +449,7 @@
                     <li>Enter beam span 'L', load position distances 'a' (left) and 'b' (right). Note: L = a + b.</li>
                     <li>Input point load magnitude 'F' in Newtons and angle of inclination '?' in degrees.</li>
                     <li>Click "Analyze Beam" to compute reaction forces using static equilibrium.</li>
-                    <li>Observe results, beam diagram, and verify SF_y = 0 condition.</li>
+                    <li>Observe results, beam diagram, and verify ΣF_y = 0 condition.</li>
                 </ol>
                 <div style="margin-top: 25px; padding: 25px; background: rgba(0,212,255,0.1); border-radius: 15px; border-left: 5px solid #00d4ff;">
                     <strong>?? Example:</strong> L=10m, a=4m, b=6m, F=1000N, ?=30° ? R_A=600N, R_B=400N
@@ -478,10 +478,10 @@
                             <input type="number" id="forceF" placeholder="1000" value="1000" min="1" step="10">
                         </div>
                         <div class="input-group">
-                            <label>Angle ? (°)</label>
+                            <label>Angle θ (°)</label>
                             <input type="number" id="angleTheta" placeholder="30" value="30" min="0" max="90" step="1">
                         </div>
-                        <button class="analyze-btn" onclick="analyzeBeam()">?? Analyze Beam</button>
+                        <button class="analyze-btn" onclick="analyzeBeam()">🚀 Analyze Beam</button>
                     </div>
 
                     <div class="results-grid" id="resultsContainer" style="display: none;">
@@ -497,7 +497,7 @@
                         </div>
                         <div class="result-card" style="grid-column: span 2;">
                             <div class="result-label">Equilibrium Check</div>
-                            <div class="result-value" id="equilibriumCheck" style="font-size: 2rem; color: #10b981;">? Balanced</div>
+                            <div class="result-value" id="equilibriumCheck" style="font-size: 2rem; color: #10b981;">✔ Balanced</div>
                         </div>
                     </div>
 
@@ -506,7 +506,7 @@
                             <div class="beam">
                                 <div class="support left"></div>
                                 <div class="support right"></div>
-                                <div class="force-arrow">??</div>
+                                <div class="force-arrow">⬇️</div>
                             </div>
                             <div style="font-size: 1.3rem; color: #a0aec0; margin-top: 20px;">
                                 Simply Supported Beam | Load at <span id="loadPosition"></span>m from A
@@ -520,14 +520,14 @@
                 <h2>References</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
                     <div style="padding: 25px; background: rgba(255,255,255,0.05); border-radius: 15px;">
-                        <h4>?? Textbooks</h4>
+                        <h4>📖 Textbooks</h4>
                         <ul style="color: #cbd5e0;">
                             <li>Strength of Materials, 6th Edition, R.K. Bansal, Laxmi Publications.</li>
                             <li>Structural Analysis, 10th Edition, R.C. Hibbeler, Pearson Education.Structural Analysis - Hibbeler</li>
                         </ul>
                     </div>
                     <div style="padding: 25px; background: rgba(255,255,255,0.05); border-radius: 15px;">
-                        <h4>?? Online Resources</h4>
+                        <h4> Online Resources</h4>
                         <ul style="color: #cbd5e0;">
                             <li>NPTEL Strength of Materials</li>
                             <li>Engineering Statics Calculators</li>
@@ -603,3 +603,4 @@
     </script>
 </body>
 </html>
+
